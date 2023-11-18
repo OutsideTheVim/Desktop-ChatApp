@@ -9,13 +9,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import ui.ErrorScreen
 import ui.MainScreen
+import ui.hub.Dash
+import ui.hub.VerifyDash
 
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
-        MainScreen()
+        VerifyDash()
     }
 }
 
