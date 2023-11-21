@@ -18,7 +18,8 @@ import ui.hub.VerifyDash
 @Preview
 fun App() {
     MaterialTheme {
-        VerifyDash()
+        MainScreen()
+        //VerifyDash()
     }
 }
 
