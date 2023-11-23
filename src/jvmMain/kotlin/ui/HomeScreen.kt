@@ -18,8 +18,8 @@ fun MainScreen() {
 
     val viewModel: ChatViewModel = ChatViewModel()
 
-    var username: String? by remember {
-        mutableStateOf(null)
+    var username: String by remember {
+        mutableStateOf("")
     }
 
     Column(
@@ -31,10 +31,12 @@ fun MainScreen() {
     ) {
         TitleImage()
         Text(text = "Chat App", modifier = Modifier.padding(8.dp))
-        TextField(value = username ?: viewModel.getRandomUsername(), onValueChange = {
+        TextField(value = username, onValueChange = {
             username = it
         })
-        Button(onClick = {  }) {
+        Button(onClick = {
+            if(username.length < 1) username = viewModel.getRandomUsername()
+        }) {
             Text("Connect")
         }
     }
